@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>All Sports</title>
+    <link rel="stylesheet" href="./src/css/styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div>ALL SPORTS</div>
+            <div>
+                <a href="#sobre">Sobre</a>
+                <a href="#posts">Posts</a>
+                <a href="#galeria">Galeria</a>
+                <a href="#projetos">Projetos</a>
+                <a href="#feedback">Feedback</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="topo" id="topo">
+        <img src="./src/images/capaFundo.png" alt="imagem de capa">
+    </section>
+
+    <section class="hero" id="sobre">
+        <h1>Sobre</h1>
+        <div class="cols">
+            <div class="card">
+                <h2>Missão</h2>
+                <p>Inspirar e capacitar pessoas de todas as idades e habilidades a alcançar seu potencial esportivo,
+                    promovendo a saúde, o bem-estar e a paixão pelo esporte.</p>
+            </div>
+            <div class="card">
+                <h2>Visão</h2>
+                <p>Ser líder em inovação e excelência no mundo dos esportes, criando experiências inesquecíveis e
+                    impulsionando o sucesso de nossos clientes.</p>
+            </div>
+            <div class="card">
+                <h2>Valores</h2>
+                <ul>
+                    <li>Paixão pelo Esporte</li>
+                    <li>Inovação Contínua</li>
+                    <li>Excelência</li>
+                    <li>Integridade</li>
+                    <li>Respeito</li>
+                    <li>Trabalho em Equipe</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section posts" id="posts">
+        <h1>Últimos Posts</h1>
+        <div class="carrossel"> 
+            <div class="post-card">
+                <!--Exemplo para alteramos depois-->
+                <img src="./src/images/postDiaDasMaes.webp" alt="postDiaDasMaes">
+                <h3>Especial Dia das Mães</h3>
+                <p>Hoje é dia de relembrar uma data especial: o Dia das Mães, comemorado em 11 de maio! Aqui na All
+                    Sports, queremos prestar nossa homenagem a todas as mães que também são atletas.</p>
+                <a href="https://www.instagram.com/allsports_culture/p/DJ2T8_HS82z/" class="btn" target="_blank">Clique para ver mais</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section galeria" id="galeria">
+        <h1>Galeria</h1>
+        <div class="post-card">
+            <h3>Equipe All Sports 2025</h3>
+            <p>Data: 15/05/2025</p>
+        </div>
+    </section>
+
+    <section class="section projetos" id="projetos">
+        <h1>Projetos</h1>
+        <div class="card">
+                <h2>Ranking Solidário</h2>
+                <p>Nossa equipe de TI desenvolveu um ranking em tempo real de status das salas que participaram da campanha do agasalho</p>
+                <a href="https://github.com/FelipeValeriano21/Ranking-ALL-SPORTS.git" target="_blank"><p>Link do projeto</p></a>
+            </div>
+    </section>
+
+    <section class="section feedback" id="feedback">
+        <h1>Avalie nosso site</h1>
+        <p>Sua avaliação é muito importante para nós</p>
+        <form>
+            <input placeholder="Nome" required>
+            <input type="email" placeholder="Email" required>
+            <textarea rows="4" placeholder="Comentários"></textarea>
+            <button type="submit">Enviar feedback</button>
+        </form>
+    </section>
+
+    <footer>
+        © <span id="year"></span> ALL Sports — Todos os direitos reservados
+    </footer>
+    <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
+</body>
+
+</html>
