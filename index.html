@@ -7,6 +7,9 @@
     <title>All Sports</title>
     <link rel="stylesheet" href="./src/css/styles.css">
     <link rel="shortcut icon" type="imagex/png" href="./src/images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chau+Philomene+One:ital@0;1&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -28,7 +31,13 @@
     </section>
 
     <section class="hero" id="sobre">
-        <h1>Sobre</h1>
+        <div class="card" id="bemVindo">
+            <p><b>Bem-vindo à All Sports!</b> <br>
+                Conectamos apaixonados por esportes e promovemos um estilo de vida saudável.
+                Aqui você encontra informações úteis, dicas e inspirações para viver com mais energia e disciplina.
+                Vamos juntos espalhar a paixão pelo esporte e construir uma comunidade saudável!</p>
+        </div>
+        <h1>Sobre nós</h1>
         <div class="cols">
             <div class="card">
                 <h2>Missão</h2>
@@ -136,7 +145,7 @@
     </section>
 
     <footer>
-        © <span id="year"></span> ALL Sports — Todos os direitos reservados
+        © <span id="year"></span> All Sports — Todos os direitos reservados
     </footer>
     <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
 
@@ -164,9 +173,25 @@
         const video = document.getElementById('meuVideo');
 
         video.addEventListener('click', () => {
-            video.muted = false;      // ativa o som
-            video.currentTime = 0;    // volta pro início
-            video.play();             // toca novamente
+            video.muted = false;      
+            video.currentTime = 0;    
+            video.play();             
+        });
+
+        document.querySelectorAll('.valor-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const emojis = ['🏆', '🔥', '🤩', '⭐', '💪🏼', '🥇', '🧩'];
+                const emoji = document.createElement('span');
+                emoji.classList.add('emoji');
+                emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+
+                emoji.style.left = `${Math.random() * 80 + 10}%`;
+                emoji.style.top = `${Math.random() * 80 + 10}%`;
+
+                item.appendChild(emoji);
+
+                setTimeout(() => emoji.remove(), 1000);
+            });
         });
     </script>
 
