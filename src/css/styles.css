@@ -1,166 +1,455 @@
+/* ===============================
+   ESTILO GERAL
+================================= */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: Inter, Arial
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", Arial, sans-serif;
+}
+
+:root {
+  --bg: #fff;
+  --card: #fff;
+  --accent: #ffd700;
+  --muted: #666;
+  --max-width: 1100px;
 }
 
 body {
-    background: var(--bg);
-    color: #111
+  background: var(--bg);
+  color: #111;
 }
 
+/* ===============================
+   CABEÇALHO
+================================= */
 header {
-    background: black;
-    color: #ffffff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, .05);
-    padding: 25px 0;
-    position: sticky;
-    top: 0;
-    z-index: 10
+  background: black;
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .05);
+  padding: 25px 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+header img {
+  width: 50px;
+  height: auto;
 }
 
 nav {
-
-    max-width: var(--max-width);
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    font-weight: 600
+  max-width: var(--max-width);
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  font-weight: 600;
 }
 
 nav a {
-    text-decoration: none;
-    color: white;
-    margin: 0 10px;
-    font-size: 14px
+  text-decoration: none;
+  color: white;
+  margin: 0 10px;
+  font-size: 14px;
+  transition: color 0.3s ease;
 }
 
+nav a:hover {
+  color: var(--accent);
+}
+
+/* ===============================
+   CAPA (TOPO)
+================================= */
 .topo img {
   width: 100%;
   height: auto;
   display: block;
-  object-fit: cover; 
+  object-fit: cover;
 }
 
+/* ===============================
+   SEÇÃO SOBRE
+================================= */
 .hero {
-    max-width: var(--max-width);
-    margin: 40px auto;
-    padding: 0 20px
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 0 20px;
+  text-align: center;
 }
 
 .hero h1 {
-    font-size: 32px;
-    margin-bottom: 20px;
-    color: #000
-}
-
-.section {
-    max-width: var(--max-width);
-    margin: 40px auto;
-    padding: 0 20px
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: #000;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 1px;
 }
 
 .cols {
-    display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
 }
 
 .card {
-    background: var(--card);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, .06)
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  width: 300px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform .3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
 }
 
 .card h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
-    color: #000;
+  font-size: 20px;
+  color: #000;
+  margin-bottom: 10px;
 }
 
-.card ul {
-    margin-top: 10px;
-    padding-left: 18px;
-    color: var(--muted)
+.card p {
+  color: #333;
+  font-size: 15px;
+  line-height: 1.6;
 }
 
-.posts,
-.galeria,
-.projetos,
-.feedback {
-    margin-top: 40px
+/* ===============================
+   SEÇÃO VALORES
+================================= */
+.valores {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
 }
 
-.carrossel{
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
+.valores h2 {
+  font-size: 16px;
+  letter-spacing: 2px;
+  color: #bbb;
+  margin-bottom: 10px;
+}
+
+.valores h1 {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 50px;
+}
+
+.valores-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.valor-item {
+  background: transparent;
+  border: 1.5px solid #fff;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.valor-item:hover {
+  background: #fff;
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* ===============================
+   SEÇÃO POSTS
+================================= */
+.section.posts {
+  background: #f7f7f7;
+  padding: 80px 20px;
+  text-align: center;
+  border-top: 2px solid #eee;
+}
+
+.section.posts h1 {
+  font-size: 32px;
+  color: #000;
+  margin-bottom: 30px;
+}
+
+.carrossel {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
 }
 
 .post-card {
-    background: var(--card);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, .06);
-    margin-top: 20px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  max-width: 300px;
+  transition: transform .3s ease;
+}
 
-    img{
-        height: 200px;
-        width: 200px;
-    }
+.post-card:hover {
+  transform: translateY(-5px);
+}
+
+.post-card img {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  object-fit: cover;
 }
 
 .post-card h3 {
-    margin-bottom: 8px;
-    color: #000;
-    font-size: 18px
+  margin-top: 12px;
+  color: #000;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.post-card p {
+  color: #444;
+  font-size: 15px;
+  margin: 10px 0;
+  line-height: 1.5;
 }
 
 .btn {
-    display: inline-block;
-    margin-top: 12px;
-    padding: 10px 18px;
-    background: var(--accent);
-    color: black;
-    text-decoration: none;
-    border-radius: 8px;
-    font-size: 14px;
-    border-style:solid;
-    border-color: black;
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 20px;
+  background: #000;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background .3s;
+}
+
+.btn:hover {
+  background: #333;
+}
+
+
+/* Seção Bate-bola */
+.batebola {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(180deg, #fff 0%, #f2f2f2 100%);
+}
+
+.batebola h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.batebola p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.batebola .video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.batebola video {
+  width: 100%;
+  max-width: 360px; /* ideal para vídeo vertical */
+  aspect-ratio: 9 / 16;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.batebola video:hover {
+  transform: scale(1.03);
+}
+
+
+/* ==== GALERIA ==== */
+.galeria {
+  background: #fff;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.galeria h1 {
+  font-size: 32px;
+  color: #000;
+  margin-bottom: 30px;
+}
+
+.galeria-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.galeria .post-card {
+  background: #f7f7f7;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  transition: transform .3s ease;
+  cursor: pointer;
+  width: 280px;
+}
+
+.galeria .post-card:hover {
+  transform: translateY(-5px);
+}
+
+.galeria .post-card img {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+/* ==== MODAL ==== */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1000;
+  padding-top: 60px; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  border-radius: 10px;
+}
+
+#caption {
+  margin: 15px auto;
+  text-align: center;
+  color: #ccc;
+  font-size: 16px;
+}
+
+.close {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #bbb;
+}
+
+/* Responsivo */
+@media (max-width: 700px) {
+  .modal-content {
+    width: 95%;
+  }
+}
+
+/* ===============================
+   SEÇÃO FEEDBACK
+================================= */
+.feedback {
+  background: #f7f7f7;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.feedback h1 {
+  font-size: 32px;
+  color: #000;
+}
+
+.feedback p {
+  margin: 10px 0 25px;
+  color: #444;
 }
 
 form {
-    display: grid;
-    gap: 12px;
-    margin-top: 20px
+  display: grid;
+  gap: 12px;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 input,
 textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 14px
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
 }
 
 button {
-    padding: 10px;
-    color: black;
-    text-decoration: none;
-    border-radius: 8px;
-    font-size: 14px;
-    border-style:solid;
-    border-color: black;
-    cursor: pointer
+  padding: 10px;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
+button:hover {
+  background: #333;
+}
+
+/* ===============================
+   RODAPÉ
+================================= */
 footer {
-    text-align: center;
-    font-size: 12px;
-    color: var(--muted);
-    margin: 60px 0 20px
+  text-align: center;
+  font-size: 12px;
+  color: var(--muted);
+  margin: 60px 0 20px;
+}
+
+.imgMeio {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; 
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.imgMeio img {
+  width: 100%;
+  height: auto;
+  max-width: 1200px; /* limita o tamanho máximo */
+  object-fit: cover; /* mantém o foco da imagem */
+  border-radius: 12px; /* opcional, só pra deixar com cantos suaves */
 }

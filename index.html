@@ -6,17 +6,18 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>All Sports</title>
     <link rel="stylesheet" href="./src/css/styles.css">
+    <link rel="shortcut icon" type="imagex/png" href="./src/images/logo.png">
 </head>
 
 <body>
     <header>
         <nav>
-            <div>ALL SPORTS</div>
+            <img src="./src/images/logo.png" alt="">
+            <div class="titulo">ALL SPORTS</div>
             <div>
                 <a href="#sobre">Sobre</a>
                 <a href="#posts">Posts</a>
                 <a href="#galeria">Galeria</a>
-                <a href="#projetos">Projetos</a>
                 <a href="#feedback">Feedback</a>
             </div>
         </nav>
@@ -39,55 +40,94 @@
                 <p>Ser líder em inovação e excelência no mundo dos esportes, criando experiências inesquecíveis e
                     impulsionando o sucesso de nossos clientes.</p>
             </div>
-            <div class="card">
-                <h2>Valores</h2>
-                <ul>
-                    <li>Paixão pelo Esporte</li>
-                    <li>Inovação Contínua</li>
-                    <li>Excelência</li>
-                    <li>Integridade</li>
-                    <li>Respeito</li>
-                    <li>Trabalho em Equipe</li>
-                </ul>
-            </div>
+        </div>
+    </section>
+
+    <div class="imgMeio">
+        <img src="./src/images/capaSobre.jpg" alt="">
+    </div>
+
+
+    <section class="valores" id="valores">
+        <h2>ALL SPORTS</h2>
+        <h1>Nossos valores</h1>
+        <div class="valores-grid">
+            <div class="valor-item">Paixão pelo Esporte</div>
+            <div class="valor-item">Respeito</div>
+            <div class="valor-item">Inovação Contínua</div>
+            <div class="valor-item">Trabalho em Equipe</div>
+            <div class="valor-item">Excelência</div>
+            <div class="valor-item">Integridade</div>
         </div>
     </section>
 
     <section class="section posts" id="posts">
         <h1>Últimos Posts</h1>
-        <div class="carrossel"> 
+        <div class="carrossel">
             <div class="post-card">
-                <!--Exemplo para alteramos depois-->
-                <img src="./src/images/postDiaDasMaes.webp" alt="postDiaDasMaes">
-                <h3>Especial Dia das Mães</h3>
-                <p>Hoje é dia de relembrar uma data especial: o Dia das Mães, comemorado em 11 de maio! Aqui na All
-                    Sports, queremos prestar nossa homenagem a todas as mães que também são atletas.</p>
-                <a href="https://www.instagram.com/allsports_culture/p/DJ2T8_HS82z/" class="btn" target="_blank">Clique para ver mais</a>
+                <img src="./src/images/postVisita.webp">
+                <h3>Visita ao Arquivo Público de SP</h3>
+                <p>Venha ver como foi nossa visita ao Arquivo Público de São Paulo no dia 20/10</p>
+                <a href="https://www.instagram.com/p/DQUIWuYDWqD/?utm_source=ig_web_copy_link" class="btn"
+                    target="_blank">Clique
+                    para ver mais</a>
+            </div>
+            <div class="post-card">
+                <img src="./src/images/postSetembro.webp">
+                <h3>Especial: Setembro amarelo</h3>
+                <p>Campanha de prevenção ao suicídio.</p>
+                <a href="https://www.instagram.com/p/DO6qY7lD5aJ/?utm_source=ig_web_copy_link" class="btn"
+                    target="_blank">Clique
+                    para ver mais</a>
             </div>
         </div>
     </section>
+
+    <section class="section batebola" id="batebola">
+        <h1>Bate-bola</h1>
+        <p>Confira nossa última entrevista:</p>
+
+        <div class="video-container">
+            <video id="meuVideo" autoplay muted loop playsinline>
+                <source src="./src/images/videoBatebola.mp4" type="video/mp4">
+                Seu navegador não suporta vídeos HTML5.
+            </video>
+        </div>
+    </section>
+
+
 
     <section class="section galeria" id="galeria">
         <h1>Galeria</h1>
-        <div class="post-card">
-            <h3>Equipe All Sports 2025</h3>
-            <p>Data: 15/05/2025</p>
+        <div class="galeria-grid">
+            <div class="post-card">
+                <img src="./src/images/equipe.jpeg" alt="Equipe All Sports 2025" class="zoom-img">
+                <h3>Equipe All Sports 2025</h3>
+                <p>Data: 15/05/2025</p>
+            </div>
+            <div class="post-card">
+                <img src="./src/images/fhc.jpeg" alt="Visita Fundação Henrique Cardoso" class="zoom-img">
+                <h3>Visita: Fundação Henrique Cardoso</h3>
+                <p>Data: 18/08/2025</p>
+            </div>
+            <div class="post-card">
+                <img src="./src/images/arquivo.jpeg" alt="Visita Arquivo Público de SP" class="zoom-img">
+                <h3>Visita: Arquivo Público de SP</h3>
+                <p>Data: 20/10/2025</p>
+            </div>
         </div>
     </section>
 
-    <section class="section projetos" id="projetos">
-        <h1>Projetos</h1>
-        <div class="card">
-                <h2>Ranking Solidário</h2>
-                <p>Nossa equipe de TI desenvolveu um ranking em tempo real de status das salas que participaram da campanha do agasalho</p>
-                <a href="https://github.com/FelipeValeriano21/Ranking-ALL-SPORTS.git" target="_blank"><p>Link do projeto</p></a>
-            </div>
-    </section>
+    <div id="imgModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="imgAmpliada">
+        <div id="caption"></div>
+    </div>
 
     <section class="section feedback" id="feedback">
         <h1>Avalie nosso site</h1>
         <p>Sua avaliação é muito importante para nós</p>
-        <form>
+        <form action="https://formsubmit.co/euamanddys@gmail.com" method="POST">
             <input placeholder="Nome" required>
             <input type="email" placeholder="Email" required>
             <textarea rows="4" placeholder="Comentários"></textarea>
@@ -99,6 +139,41 @@
         © <span id="year"></span> ALL Sports — Todos os direitos reservados
     </footer>
     <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
+
+    <script>
+        const modal = document.getElementById("imgModal");
+        const modalImg = document.getElementById("imgAmpliada");
+        const captionText = document.getElementById("caption");
+
+        document.querySelectorAll(".zoom-img").forEach(img => {
+            img.addEventListener("click", () => {
+                modal.style.display = "block";
+                modalImg.src = img.src;
+                captionText.innerHTML = img.alt;
+            });
+        });
+
+        document.querySelector(".close").addEventListener("click", () => {
+            modal.style.display = "none";
+        });
+
+        modal.addEventListener("click", (e) => {
+            if (e.target === modal) modal.style.display = "none";
+        });
+
+        const video = document.getElementById('meuVideo');
+
+        video.addEventListener('click', () => {
+            video.muted = false;      // ativa o som
+            video.currentTime = 0;    // volta pro início
+            video.play();             // toca novamente
+        });
+    </script>
+
+
 </body>
+
+
+
 
 </html>
