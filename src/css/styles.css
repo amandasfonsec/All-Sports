@@ -61,6 +61,12 @@ nav a:hover {
   color: var(--accent);
 }
 
+@media (max-width: 768px) {
+  .titulo {
+    display: none;
+  }
+}
+
 /* ===============================
    CAPA (TOPO)
 ================================= */
